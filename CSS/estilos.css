@@ -20,6 +20,7 @@ body {
     z-index: 10;
 }
 
+
 .icon {
     width: 100%;
     height: 100%;
@@ -30,7 +31,7 @@ body {
 .menu-nav {
     background: #FAF3EB;
     position: fixed;
-    top: 0;
+    top: 1;
     left: 0;
     width: 100%;
     height: 100vh;
