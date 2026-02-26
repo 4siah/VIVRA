@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+
+
+.input {
+    display: none;
+}
+
+.label {
+    width: 50px;
+    height: 40px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url("/IMG/logo_sinfondo.png") center/contain no-repeat;
+}
+
+.menu-nav {
+    background: #FAF3EB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateY(-100%);
+    transition: 0.6s ease;
+
+    z-index: 9;
+    pointer-events: none;
+}
+
+.input:checked ~ .menu-nav {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.item {
+    padding: 10px;
+}
+
+.link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 5vh;
+    color: #BCD7EA;
+}
+
+.link:hover {
+    color: black;
+}
+
+
+
+.slider {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide1 {
+    background: url('/IMG/club lectura.jpg') center/cover no-repeat;
+}
+
+.slide2 {
+    background: url('/IMG/craft night.jpeg') center/cover no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin-left: 8%;
+    color: white;
+}
+
+.content h1 {
+    font-size: clamp(50px, 8vw, 110px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 18px 40px;
+    background: #ed832b;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    background: #d96f1f;
+    transform: translateY(-3px);
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cards {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 60px auto;
+    justify-items: center; 
+}
+
+.card {
+    width: 260px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card-top {
+    flex: 2;
+    background: #9fb6c8;
+}
+
+.card-bottom {
+    flex: 1;
+    background: #e3cda8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.footer {
+    background: #bcd7ea;
+    padding: 60px 25px 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ed832b;
+}
+
+.footer-links a:hover {
+    color: black;
+}
+
+.footer-legal {
+    margin-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .label {
+        display: none;
+    }
+
+    .menu-nav {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 70px;
+        padding: 0 50px;
+        border-radius: 50px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        pointer-events: auto;
+    }
+
+    .list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .link {
+        font-size: 16px;
+        color: black;
+    }
+
+    .link:hover {
+        color: #ed832b;
+    }
+
+ .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
