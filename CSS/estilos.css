@@ -1,205 +1,287 @@
-body {
-    margin: 0;
-    padding: 0;
+    body {
+        margin: 0;
+        padding: 0;
 
-}
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: gray;
 
-.label {
-    width: 50px;
-    height: 40px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 10;
-}
 
-.input {
-    display: none;
-}
+        /* FUENTE GENERAL */
 
-.icon {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: url("/IMG/logo_sinfondo.png") center/contain no-repeat;
-}
-
-.menu-nav {
-    background: #FAF3EB;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transform: translateY(-100%);
-    transition: 0.6s ease;
-
-    z-index: 9;
-    pointer-events: none;
-}
-
-.input:checked~.menu-nav {
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.list {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.item {
-    padding: 10px;
-}
-
-.link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 5vh;
-    color: #BCD7EA;
-    transition: 0.3s;
-}
-
-.link:hover {
-    color: black;
-}
-
-main {
-    min-height: 100vh;
-}
-
-.footer {
-    background-color: #b6f13a;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.footer-contenido {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.columna {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: #2b6f00;
-}
-
-.footer-bottom {
-    background-color: #1b2b0d;
-    color: #b6f13a;
-    padding: 20px;
-    text-align: center;
-}
-
-.iconos {
-    margin-top: 10px;
-}
-
-.iconos img {
-    width: 25px;
-    margin: 0 10px;
-    transition: 0.3s;
-}
-
-.iconos img:hover {
-    transform: scale(1.2);
-}
+        font-family: "articulat-cf", sans-serif;
+        font-weight: 400;
+        font-style: normal;
 
 
 
-@media screen and (min-width: 768px) {
+    }
 
     .label {
-        pointer-events: none;
-        cursor: default;
-        z-index: 11;
+        width: 50px;
+        height: 40px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .input {
+        display: none;
+    }
+
+    .icon {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url("/IMG/logo_sinfondo.png") center/contain no-repeat;
     }
 
     .menu-nav {
-        top: 20px;
-        left: 50%;
+        background: #ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
 
-        transform: translateX(-50%);
-        width: auto;
-        height: 60px;
-        padding: 0 40px;
-        background: rgba(255, 255, 255, 0.7);
-
-        border-radius: 999px;
         display: flex;
-        align-items: center;
         justify-content: center;
-        pointer-events: auto;
-        border: 1px solid black;
+        align-items: center;
+
+        transform: translateY(-100%);
+        transition: 0.6s ease;
+
+        z-index: 9;
+        pointer-events: none;
     }
 
     .input:checked~.menu-nav {
-        transform: translateX(-50%);
+        transform: translateY(0);
+        pointer-events: auto;
     }
 
     .list {
-        display: flex;
-        gap: 35px;
-        align-items: center;
+        list-style: none;
+        padding: 0;
+        text-align: center;
     }
 
     .item {
-        padding: 0;
+        padding: 10px;
     }
 
     .link {
-        font-size: 14px;
-        font-weight: 500;
-        color: #333;
-        text-transform: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 5vh;
+        color: #1b19a8;
+        transition: 0.3s;
     }
 
     .link:hover {
-        color: black;
+        color: #ed832b;
     }
+
+    main {
+        min-height: 100vh;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* FOOTER */
 
     .footer {
-        padding: 40px;
-        text-align: left;
+        background-color: #1b19a8;
+        padding: 30px 20px;
     }
 
+
     .footer-contenido {
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+
+    .columna {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+
+    .columna a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+
+    .columna span {
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    .columna img {
+        width: 120px;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 5px;
     }
 
     .footer-bottom {
+        background-color: #ffffff;
+        color: #ed832b;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        padding: 15px 40px;
-        text-align: left;
+        text-align: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        font-size: 14px;
     }
 
     .iconos {
-        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
 
     .iconos img {
-        margin-left: 15px;
+        width: 20px;
+        height: 20px;
+        transition: 0.3s ease;
     }
-}
+
+
+    .iconos img:hover {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+
+
+
+    /* Desktop */
+
+    @media screen and (min-width: 768px) {
+
+        .label {
+            pointer-events: none;
+            cursor: default;
+            z-index: 11;
+        }
+
+        .menu-nav {
+            top: 20px;
+            left: 50%;
+
+            transform: translateX(-50%);
+            width: auto;
+            height: 60px;
+            padding: 0 40px;
+            background: rgba(255, 255, 255, 0.7);
+
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+        }
+
+        .input:checked~.menu-nav {
+            transform: translateX(-50%);
+        }
+
+        .list {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .item {
+            padding: 0;
+        }
+
+        .link {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            text-transform: none;
+        }
+
+        .link:hover {
+            color: black;
+        }
+
+
+
+        .footer {
+            padding: 40px 60px;
+        }
+
+        .footer-contenido {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-bottom {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 60px;
+        }
+
+        .columna img {
+            width: 120px;
+            margin-bottom: 0;
+
+        }
+
+    }
