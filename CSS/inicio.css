@@ -1,0 +1,78 @@
+
+/* PÁGINA PRINCIPAL PARA NO MEZCLAR ESTILOS ENTRE ESTA, Y LA DE 'ESTILOS.CSS' */
+
+
+s-1 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fondo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.contenido1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    padding: 1.5rem;
+    max-width: 500px;
+}
+
+.titulo {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 1rem;
+    max-width: 280px;
+}
+
+.p1 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    opacity: 0.9;
+    max-width: 300px;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+/* VERSIÓN DESKTOP */
+
+
+
+@media (min-width: 1024px) {
+
+    .contenido1 {
+        padding: 3rem;
+    }
+
+    .titulo {
+        font-size: 3rem;
+        max-width: 500px;
+    }
+
+    .p1 {
+        font-size: 1rem;
+    }
+}
