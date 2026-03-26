@@ -1,8 +1,7 @@
-
 /* PÁGINA PRINCIPAL PARA NO MEZCLAR ESTILOS ENTRE ESTA, Y LA DE 'ESTILOS.CSS' */
 
 
-s-1 {
+#s-1 {
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -14,10 +13,12 @@ s-1 {
     z-index: 0;
 }
 
+
 .fondo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.7);
 }
 
 
@@ -40,21 +41,163 @@ s-1 {
 }
 
 .p1 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
     color: white;
     opacity: 0.9;
     max-width: 300px;
 }
 
+.palabra1 {
+
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+
+
 .btn {
     display: inline-block;
-    background: white;
-    color: black;
+    background: #ed832b;
+    color: #ffffff;
     padding: 0.6rem 1rem;
     border-radius: 20px;
     font-size: 0.8rem;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn span {
+    margin-left: 5px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #1b19a8;
+    transform: translateY(-5px);
+}
+
+.btn:hover span {
+    opacity: 1;
+    margin-left: 10px;
+}
+
+
+
+
+.s-2 {
+    padding: 40px 16px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 24px;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+
+
+
+.contenido-2 {
+    padding: 16px;
+}
+
+.contenido-2 h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.contenido-2 p {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 12px;
+}
+
+.contenido-2 a {
+    text-decoration: none;
+    color: #ed832b;
+    font-weight: bold;
+}
+
+
+.marquee {
+  width: 100%;
+  background-color: #ed832b;
+  overflow: hidden;
+  height: 60px; 
+  display: flex;
+  align-items: center;
+  margin-top: 0; 
+}
+
+.marquee-texto {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeMove 12s linear infinite;
+}
+
+.marquee-content span {
+  color: white;
+  font-size: 16px;
+  padding-right: 50px;
+}
+
+
+@keyframes marqueeMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contenido {
+  background: #cfe0eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* VERSIÓN DESKTOP */
@@ -75,4 +218,26 @@ s-1 {
     .p1 {
         font-size: 1rem;
     }
+
+  .container {
+    flex-direction: column;
+  }
+ 
+    .s-2 h2 {
+        font-size: 26px;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 420px;
+    }
+
+    
+
+
 }
