@@ -1,3 +1,6 @@
+
+/* INICIO. */
+
 let text = "  VIVRA - Residencia + Cultura ";
 let i = 0;
 
@@ -38,7 +41,7 @@ function initMap() {
 
   const centerMap = { lat: 38.2699, lng: -0.7126 };
 
-  // 🎨 ESTILO MINIMAL GRIS (EL TUYO)
+ 
   const mapStyle = [
     {
       "featureType": "water",
@@ -158,7 +161,7 @@ function initMap() {
     center: centerMap,
     zoom: 10,
     disableDefaultUI: true,
-    styles: mapStyle // 👈 AQUÍ
+    styles: mapStyle 
   };
 
   const map = new google.maps.Map(
