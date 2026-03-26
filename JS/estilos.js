@@ -35,7 +35,7 @@ function initMap() {
   ];
 
   const fehMarker = {
-    url: './img/logo_sinfondo.png',
+    url: './IMG/logo_sinfondo.png',
     scaledSize: new google.maps.Size(40, 40)
   };
 
