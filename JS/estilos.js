@@ -1,6 +1,8 @@
-/* ===============================
-      TITULO ANIMADO
-   =============================== */
+/* TITULO ANIMADO / INICIO. */
+
+
+
+
 let text = "  VIVRA - Residencia + Cultura ";
 let i = 0;
 setInterval(() => {
@@ -8,9 +10,15 @@ setInterval(() => {
   i = (i + 1) % text.length;
 }, 200);
 
-/* ===============================
-   GOOGLE MAPS
-=============================== */
+/* GOOGLE MAPS 
+
+a partir de este vídeo: https://www.youtube.com/watch?v=6Tl3ROOgvgw&t=35s
+
+
+*/
+
+
+
 function initMap() {
 
   const markers = [
@@ -35,11 +43,14 @@ function initMap() {
   ];
 
   const fehMarker = {
-    url: './IMG/logo_sinfondo.png', // ruta de tu imagen
+    url: './IMG/logo_sinfondo.png', 
     scaledSize: new google.maps.Size(40, 40)
   };
 
   const centerMap = { lat: 38.2699, lng: -0.7126 };
+
+
+/* MAPA ESTILOS DE : https://snazzymaps.com/ */
 
   const mapStyle = [
     { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#e9e9e9" }, { "lightness": 17 }] },
