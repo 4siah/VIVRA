@@ -1,7 +1,7 @@
 /* PÁGINA PRINCIPAL PARA NO MEZCLAR ESTILOS ENTRE ESTA, Y LA DE 'ESTILOS.CSS' */
 
 
-#s-1 {
+.s-1 {
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -20,7 +20,6 @@
     object-fit: cover;
     filter: brightness(0.8);
 }
-
 
 
 .contenido1 {
@@ -50,22 +49,20 @@
 
 .palabra1 {
 
-font-family: "articulat-cf", sans-serif;
-font-weight: 800;
-font-style: italic;
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 800;
+    font-style: italic;
 
 }
-
-
 
 
 .btn {
     display: inline-block;
     background: #ed832b;
     color: #ffffff;
-    padding: 0.6rem 1rem;
+    padding: 10px 16px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -85,7 +82,6 @@ font-style: italic;
     opacity: 1;
     margin-left: 10px;
 }
-
 
 
 
@@ -109,7 +105,6 @@ h2 {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
@@ -134,7 +129,7 @@ h2 {
 
 .contenido-2 p {
     font-size: 14px;
-    color: #555555;
+    color: #000000;
     margin-bottom: 12px;
 }
 
@@ -146,69 +141,121 @@ h2 {
 
 
 .marquee {
-  width: 100%;
-  background-color: #ed832b;
-  overflow: hidden;
-  height: 60px; 
-  display: flex;
-  align-items: center;
-  margin-top: 0; 
+    width: 100%;
+    background-color: #ed832b;
+    overflow: hidden;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
 }
 
 .marquee-texto {
-  display: flex;
-  white-space: nowrap;
-  animation: marqueeMove 12s linear infinite;
+    display: flex;
+    white-space: nowrap;
+    animation: marqueeMove 15s linear infinite;
 }
 
 .marquee-content span {
-  color: white;
-  font-size: 16px;
-  padding-right: 50px;
+    color: white;
+    font-size: 16px;
+    padding-right: 50px;
 }
-
-
-@keyframes marqueeMove {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 
 
 
 .container-mapa {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+
+.mapa {
+    width: 100%;
+    height: 100%;
+}
+
+
+#google-map {
+    width: 100%;
+    height: 100%;
 }
 
 
 .contenido {
-  background: #cfe0eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+
+}
+
+
+.mapa-card {
+    position: relative;
+    height: 450px;
+    padding: 16px 24px 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.mapa-label {
+    position: absolute;
+    top: -75px;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    
+}
+
+.mapa-flecha {
+    position: absolute;
+    top: -75px;
+    right: 16px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.mapa-texto {
+    font-size: 26px; 
+}
+
+.mapa-btn {
+    background: #ed832b;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    width: fit-content;
+    transition: 0.5s;
+}
+
+
+
+.mapa-btn:hover {
+    background: #1b19a8;
+    transition: 0.5s;
 
 }
 
 
 
-.mapa {
-  width: 100%;
-  height: 100%;
+@keyframes marqueeMove {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
-
-#google-map {
-  width: 100%;
-  height: 100%;
-}
-
-
-
 
 
 
@@ -222,7 +269,7 @@ h2 {
 @media (min-width: 1024px) {
 
     .contenido1 {
-        padding: 3rem;
+        padding: 48px;
     }
 
     .titulo {
@@ -234,12 +281,12 @@ h2 {
         font-size: 1rem;
     }
 
-  .container {
-    flex-direction: column;
-  }
- 
+    .container {
+        flex-direction: column;
+    }
+
     .s-2 h2 {
-        font-size: 26px;
+        font-size: 1.5rem;
     }
 
     .cards {
@@ -252,7 +299,32 @@ h2 {
         width: 420px;
     }
 
+
+    .container-mapa {
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+    }
+
+    .mapa {
+        height: 100%;
+    }
+
+    .contenido {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px;
+    }
+
+    .mapa-card {
+        height: 420px;
+        padding: 28px;
+    }
+
+    .mapa-texto {
+        font-size: 32px;
+    }
+
+
     
-
-
 }
