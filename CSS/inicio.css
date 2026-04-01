@@ -7,20 +7,23 @@
     overflow: hidden;
 }
 
+
 .fondo {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-}
-
-
-.fondo img {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.8);
+    height: 100vh;
+    overflow: hidden;
 }
 
+.fondo video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
 
 .contenido1 {
     position: absolute;
@@ -52,10 +55,10 @@
     font-family: "articulat-cf", sans-serif;
     font-weight: 800;
     font-style: italic;
-    text-decoration: underline;
 
 
 }
+
 
 
 .btn {
@@ -92,6 +95,8 @@
 
 h2 {
     margin-bottom: 24px;
+    font-size: 1.7rem;
+
 }
 
 
@@ -208,7 +213,7 @@ h2 {
     font-size: 12px;
     letter-spacing: 1px;
 
-    
+
 }
 
 .mapa-flecha {
@@ -221,7 +226,7 @@ h2 {
 }
 
 .mapa-texto {
-    font-size: 26px; 
+    font-size: 26px;
 }
 
 .mapa-btn {
@@ -244,6 +249,88 @@ h2 {
 }
 
 
+.info {
+    padding: 150px 20px; 
+    text-align: center;
+}
+
+.info-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-title {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+.info-text {
+    font-size: 0.95rem;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+.info-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.btn-outline {
+    border: 1px solid black;
+    padding: 10px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+    transition: all 0.55s ease-out; 
+}
+
+.btn-outline:hover {
+    border: 1px solid #1b19a8;
+    color: white;
+    background-color: #1b19a8;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 12px;
+}
+
+.box {
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+}
+
+
+
+.box-1 {
+    background: #e67e22;
+    color: white;
+    background-image: url('/IMG/fe.jpg');
+}
+
+.box-2 {
+    background: #ddd;
+    color: #aaa;
+}
+
+.box-3 {
+    background: #9fb6c9;
+    font-size: 2rem;
+}
+
+.box-4 {
+    background: #ddd;
+    color: #aaa;
+}
 
 
 
@@ -253,6 +340,130 @@ h2 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMACIÓN PARA MOVER EL CONTENIDO EN EL EJE X (HORIZONTAL) */
+@keyframes carr_scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#carrusel {
+    display: flex;
+    overflow: hidden;
+}
+
+#carrusel:hover {
+    .carr_grupo {
+        animation-play-state: paused;
+    }
+}
+
+.carr_grupo {
+
+    /* CONFIGURAMOS EL ITEM DEL CONTENEDOR FLEX PARA QUE NO LOS REDIMENSIONE */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+
+    /* CADA GRUPO FORMA UNA REJILLA DE 4 COLUMNAS  */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-right: 10px;
+
+    /* ACTIVAMOS LA ANIMACIÓN DE LOS 2 GRUPOS */
+    animation-name: carr_scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation: carr_scroll 10s linear infinite; */
+}
+
+.carrusel_item {
+    /* posicionamos relativo para que su texto se pueda poner en absoluto sobre este contenedor */
+    position: relative;
+
+}
+
+.carrusel_item .texto {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    min-width: 80%;
+    min-height: 40%;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+
+    /* EN EL CUADRO DE TEXTO PODEMOS PONER FILTROS PARA EFECTOS, MEJORANDO LA DECORACIÓN */
+    /* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/backdrop-filter */
+    backdrop-filter: blur(2px);
+    /* backdrop-filter: brightness(60%);
+    backdrop-filter: contrast(40%);
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+    backdrop-filter: grayscale(30%);
+    backdrop-filter: hue-rotate(120deg);
+    backdrop-filter: invert(70%);
+    backdrop-filter: opacity(20%); */
+}
+
+.carr_img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.box:hover {
+    opacity: 0.6;
+}
 
 
 
@@ -301,8 +512,10 @@ h2 {
         flex-direction: column;
     }
 
-    .s-2 h2 {
-        font-size: 1.5rem;
+    .h2 {
+    margin-bottom: 24px;
+    font-size: 1rem;
+
     }
 
     .cards {
@@ -341,6 +554,21 @@ h2 {
         font-size: 32px;
     }
 
+  .info-title {
+        font-size: 2rem;
+    }
 
+    .info-text {
+        font-size: 1rem;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .box {
+        font-size: 1.2rem;
+        padding: 28px;
+    }
 
 }
