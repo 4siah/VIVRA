@@ -52,6 +52,8 @@
     font-family: "articulat-cf", sans-serif;
     font-weight: 800;
     font-style: italic;
+    text-decoration: underline;
+
 
 }
 
@@ -83,8 +85,6 @@
     margin-left: 10px;
 }
 
-
-
 .s-2 {
     padding: 40px 16px;
     text-align: center;
@@ -114,8 +114,6 @@ h2 {
     height: 140px;
     object-fit: cover;
 }
-
-
 
 
 .contenido-2 {
@@ -247,6 +245,24 @@ h2 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes marqueeMove {
     0% {
         transform: translateX(0%);
@@ -326,5 +342,5 @@ h2 {
     }
 
 
-    
+
 }
