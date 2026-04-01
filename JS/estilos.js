@@ -102,6 +102,14 @@ function initMap() {
 
 
 
+/* AUTOMÁTICO EN MÓVILES (SIN PAUSA)/ */
+
+
+const video = document.getElementById("bg-video");
+video.play().catch(error => {
+    console.log("Autoplay bloqueado:", error);
+});
+
   
 }
 
