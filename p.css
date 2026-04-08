@@ -1,0 +1,289 @@
+
+
+
+
+
+
+
+
+
+
+.options {
+  display: flex;
+  flex-direction: column; /* 🔥 móvil en columna */
+  gap: 12px;
+  padding: 16px;
+}
+
+/* CARD */
+.option {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  border-radius: 20px;
+
+  background-image: var(--optionBackground);
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+/* EXPANSIÓN EN MÓVIL (vertical) */
+.option.active {
+  height: 200px;
+}
+
+/* SOMBRA */
+.option .shadow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* TEXTO (SIEMPRE VISIBLE 🔥) */
+.label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  z-index: 2;
+}
+
+/* ICONO / NÚMERO */
+.icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: white;
+  color: black;
+
+  font-weight: bold;
+
+  flex-shrink: 0; /* 🔥 evita que se deforme */
+}
+
+/* TEXTO */
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .main {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.info .sub {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}.options {
+  display: flex;
+  flex-direction: column; /* 🔥 móvil en columna */
+  gap: 12px;
+  padding: 16px;
+}
+
+/* CARD */
+.option {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  border-radius: 20px;
+
+  background-image: var(--optionBackground);
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+/* EXPANSIÓN EN MÓVIL (vertical) */
+.option.active {
+  height: 200px;
+}
+
+/* SOMBRA */
+.option .shadow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* TEXTO (SIEMPRE VISIBLE 🔥) */
+.label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  z-index: 2;
+}
+
+/* ICONO / NÚMERO */
+.icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: white;
+  color: black;
+
+  font-weight: bold;
+
+  flex-shrink: 0; /* 🔥 evita que se deforme */
+}
+
+/* TEXTO */
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .main {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.info .sub {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.options {
+  display: flex;
+  flex-direction: row; /* siguen en fila */
+  align-items: flex-end; /* 🔥 alineadas abajo */
+
+  gap: 20px;
+  height: 420px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* BARRAS (estado normal) */
+.option {
+  width: 90px;
+  height: 180px; /* 🔥 pequeñas */
+  
+  border-radius: 50px;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+}
+
+/* ACTIVA (crece en vertical) */
+.option.active {
+  height: 100%; /* 🔥 crece hacia arriba */
+  width: 300px; /* opcional, un poco más ancha */
+  border-radius: 30px;
+}
+
+/* SOMBRA */
+.option::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* LABEL */
+.label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ICONO */
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: white;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXTO */
+.info {
+  transition: 0.4s;
+}
+
+/* OCULTO */
+.option:not(.active) .info {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* VISIBLE */
+.option.active .info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ICONO CENTRADO EN LAS PEQUEÑAS */
+.option:not(.active) .label {
+  left: 50%;
+  transform: translateX(-50%);
+}

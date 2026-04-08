@@ -1,0 +1,171 @@
+
+/* CARRUSEL TAMAÑO MÓVIL */
+/* ********************* */
+
+.carrusel_movil {
+    /* PONEMOS LAS IMÁGENES EN MODO FLEXIBLE Y OCULTAMOS EL DESBORDAMIENTO */
+    display: flex;
+    overflow: hidden;
+    /* posicionamos relativo para que su texto se pueda poner en absoluto sobre este contenedor */
+    position: relative;
+}
+
+.carrusel_movil:hover {
+    .carrusel_movil_item {
+        animation-play-state: paused;
+    }
+}
+
+.carrusel_movil .texto {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+
+    color: white;
+    font-size: 2rem;
+    border: 1px solid white;
+    min-width: 80%;
+    min-height: 40%;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+
+    /* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/backdrop-filter */
+    backdrop-filter: blur(2px);
+    /* backdrop-filter: brightness(60%);
+    backdrop-filter: contrast(40%);
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+    backdrop-filter: grayscale(30%);
+    backdrop-filter: hue-rotate(120deg);
+    backdrop-filter: invert(70%);
+    backdrop-filter: opacity(20%); */
+}
+
+/* Animación para los ITEMS del carrusel */
+/* Se desplazan en el eje X hacia la izquierda */
+/* ESTÁ DISEÑADO PARA 4 ITEMS.POR ESO EL DESPLAZAMIENTO ES -300% (para mover 3 veces) */
+@keyframes carr_scroll_movil {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* HAY 4 IMÁGENES: TRASLADO EN EL EJE X (HORIZONTAL) LAS 3 SIGUIENTES */
+        transform: translateX(-300%);
+    }
+}
+
+.carrusel_movil_item {
+    width: 100%;
+    border-radius: 10px;
+    margin-right: 10px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+
+    animation-name: carr_scroll_movil;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@media screen and (min-width:768px) {
+    .carrusel_movil {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
+/* TAMAÑO ESCRITORIO */
+
+#carrusel {
+    display: flex;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width:767px) {
+    #carrusel {
+        display: none;
+    }
+
+}
+
+#carrusel:hover {
+    .carr_grupo {
+        animation-play-state: paused;
+    }
+}
+
+/* Animación para los ITEMS del carrusel */
+/* Se desplazan en el eje X hacia la izquierda */
+/* LOS ITEMS ESTÁN AGRUPADOS.POR ESO EL DESPLAZAMIENTO ES -100% YA QUE DESPLAZAMOS EL GRUPO QUE CONTIENE LOS ITEMS */
+/* EL GRUPO CONTENEDOR SE DUPLICA EN EL HTML PARA HACER EFECTO DE CONTINUIDAD */
+@keyframes carr_scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* LAS IMÁGENES ESTÁN AGRUPADAS EN .carr_grupo
+DUPLICAMOS EN EL HTML ESTE GRUPO PARA PODER DESPLAZAR LAS 4 IMÁGENES EN GRUPO */
+
+.carr_grupo {
+    display: grid;
+    /* EL GRUPO TIENE 4 ITEMS, CONFIGURAMOS EL GRID A 4 COLUMNAS */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-right: 10px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+
+    animation-name: carr_scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation: carr_scroll 10s linear infinite; */
+}
+
+.carrusel_item {
+    /* posicionamos relativo para que su texto se pueda poner en absoluto sobre este contenedor */
+    position: relative;
+
+}
+
+.carrusel_item .texto {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+    color: white;
+    font-size: 2rem;
+    border: 1px solid white;
+    min-width: 80%;
+    min-height: 40%;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+
+    /* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/backdrop-filter */
+    backdrop-filter: blur(2px);
+    /* backdrop-filter: brightness(60%);
+    backdrop-filter: contrast(40%);
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+    backdrop-filter: grayscale(30%);
+    backdrop-filter: hue-rotate(120deg);
+    backdrop-filter: invert(70%);
+    backdrop-filter: opacity(20%); */
+}
+
+.carr_img {
+    width: 100%;
+    border-radius: 10px;
+}
