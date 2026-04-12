@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="CSS/cultura.css">
     <link rel="stylesheet" href="CSS/contacto.css">
     <link rel="stylesheet" href="CSS/carrousel.css">
-    <link rel="stylesheet" href="https://use.typekit.net/zjz2wcm.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/zjz2wcm.css">
+    <script src="app.js" defer></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="icon" type="image/png" href="FAVICON/favicon-16x16.png">
 </head>
@@ -24,59 +25,71 @@
         <nav class="menu-nav">
             <ul class="list">
                 <li class="item"><a class="link" href="index.html">Inicio</a></li>
-                <li class="item"><a class="link" href="/HTML/residencia.html">Residencia</a></li>
-                <li class="item"><a class="link" href="/HTML/cultura.html">Cultura+</a></li>
-                <li class="item"><a class="link" href="/HTML/contacto.html">Sobre Vivra</a></li>
+                <li class="item"><a class="link" href="HTML/residencia.html">Residencia</a></li>
+                <li class="item"><a class="link" href="HTML/cultura.html">Cultura+</a></li>
+                <li class="item"><a class="link" href="HTML/contacto.html">Sobre Vivra</a></li>
             </ul>
         </nav>
     </div>
 
     <main>
-
         <section class="s-1">
+
 
             <div class="fondo"> <video autoplay muted loop playsinline>
                     <source src="VIDS/video.mp4" type="video/mp4">
 
                 </video>
-
             </div>
 
             <div class="contenido1">
 
-                <h1 class="titulo"> Un espacio para <span class="palabra1">vivir</span>, aprender y conectar. </h1>
+                <h1 class="titulo"> Donde <span class="palabra1">vivir</span> es solo el comienzo. </h1>
 
-                <p class="p1"> La primera residencia en Elche donde vivir también es cultura.</p> 
-                <a href="HTML/residencia.html" class="btn"> Descubre más <span>&#10230;</span> </a>
+                <p class="p1"> La primera residencia en Elche donde vivir también es cultura.</p>
+                <a href="HTML/residencia.html" class="btn">
+                    Descubre más
+                </a>
             </div>
 
         </section>
 
-        <section class="carrusel_movil">
-
-            <div class="carrusel_movil_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-            <div class="carrusel_movil_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-            <div class="carrusel_movil_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-            <div class="carrusel_movil_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-        </section>
-        <section id="carrusel">
-            <div class="carr_grupo">
-                <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-            </div>
-            <div class="carr_grupo">
-                <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-            </div>
-        </section>
 
         <section class="s-2">
 
-            <h2 class="s-2 texto1">Tu experiencia  comienza aquí.</h2>
+
+            <section class="carrusel_movil">
+
+                <div class="carrusel_movil_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
+                <div class="carrusel_movil_item"> <img src="IMG/lo.png" class="carr_img"> </div>
+                <div class="carrusel_movil_item"> <img src="IMG/Mesa de trabajo 1@3x.png" class="carr_img"> </div>
+                <div class="carrusel_movil_item"> <img src="IMG/Mesa de trabajo 1@3x.png" class="carr_img"> </div>
+                <div class="carrusel_movil_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
+
+
+
+            </section>
+            <section id="carrusel">
+                <div class="carr_grupo">
+                    <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
+                    <div class="carrusel_item"> <img src="IMG/lo.png" class="carr_img"> </div>
+                    <div class="carrusel_item"> <img src="IMG/Mesa de trabajo 1@3x.png" class="carr_img"> </div>
+                    <div class="carrusel_item"> <img src="IMG/de.png" class="carr_img"> </div>
+
+
+
+                </div>
+                <div class="carr_grupo">
+                    <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
+                    <div class="carrusel_item"> <img src="IMG/lo.png" class="carr_img"> </div>
+                    <div class="carrusel_item"> <img src="IMG/Mesa de trabajo 1@3x.png" class="carr_img"> </div>
+                    <div class="carrusel_item"> <img src="IMG/de.png" class="carr_img"> </div>
+
+
+                </div>
+            </section>
+
+            <h2 class="s-2 texto1">Tu experiencia <span class="destacado">comienza</span> aquí.</h2>
 
             <div class="cards">
 
@@ -92,7 +105,7 @@
 
                 </div>
 
-                <div class="card"> <img src="IMG/n.png" alt="" srcset="">
+                <div class="card"> <img src="IMG/X.jpeg" alt="" srcset="">
 
                     <div class="contenido-2">
 
@@ -104,7 +117,7 @@
 
                 </div>
 
-                <div class="card"> <img src="IMG/7.jpg" alt="" srcset="">
+                <div class="card"> <img src="IMG/n.png" alt="" srcset="">
 
                     <div class="contenido-2">
 
@@ -171,7 +184,7 @@
 
             <div class="container">
 
-                <h2 class="titulos"> Un espacio pensado para estudiantes </h2>
+                <h2 class="titulos"> Un espacio <span class="destacado">pensado</span> para estudiantes </h2>
 
                 <p class="texto2"> Diseñado para una nueva forma de vivir la universidad: flexible, social y llena de
                     experiencias que van más allá del aula. </p>
@@ -199,128 +212,98 @@
 
 
 
-<section class="values">
-  <h2 class="values-title">Our values</h2>
+        <section class="values">
+            <h2 class="values-title">Ventajas de Utilizar 'VIVRA'.</h2>
+
+            <div class="values-wrapper">
+                <button class="arrow left">&#10094;</button>
+
+                <div class="values-track">
+
+                    <div class="value-card">
+
+                        <img src="IMG/7.jpg" alt="">
+
+                        <div class="value-box">
+
+                            <span class="number">1</span>
+
+                            <p>Transparency work</p>
+                        </div>
+
+                    </div>
+
+                    <div class="value-card">
+
+                        <img src="IMG/7.jpg" alt="">
+
+                        <div class="value-box">
+
+                            <span class="number">2</span>
+
+                            <p>Make a difference every day</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="value-card">
+
+                        <img src="IMG/7.jpg" alt="">
+
+                        <div class="value-box">
+
+                            <span class="number">3</span>
+
+                            <p>Customer first</p>
+                        </div>
+
+                    </div>
+
+                    <div class="value-card">
+
+                        <img src="IMG/7.jpg" alt="">
+
+                        <div class="value-box">
+
+                            <span class="number">4</span>
+
+                            <p>Customer first</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="value-card">
+
+                        <img src="IMG/7.jpg" alt="">
+
+                        <div class="value-box">
+
+                            <span class="number">5</span>
+
+                            <p>Customer first</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="arrow right">&#10095;</button>
+
+            </div>
+        </section>
 
 
-  <div class="values-wrapper">
-    <button class="arrow left">&#10094;</button>
 
 
-    <div class="values-track">
-
-      <div class="value-card">
-
-        <img src="IMG/7.jpg" alt="">
-
-        <div class="value-box">
-
-          <span class="number">1</span>
-
-          <p>Transparency work</p>
+        <div class="video-wrapper">
+            <video class="video-custom" src="/VIDS/animática VIVRA.mp4" muted playsinline></video>
         </div>
-
-      </div>
-
-      <div class="value-card">
-
-        <img src="IMG/7.jpg" alt="">
-
-        <div class="value-box">
-
-          <span class="number">2</span>
-
-          <p>Make a difference every day</p>
-
-        </div>
-
-      </div>
-
-  
-      <div class="value-card">
-
-        <img src="IMG/7.jpg" alt="">
-
-        <div class="value-box">
-
-          <span class="number">3</span>
-
-          <p>Customer first</p>
-        </div>
-
-      </div>
-
-
-      <div class="value-card">
-
-        <img src="IMG/7.jpg" alt="">
-
-        <div class="value-box">
-
-          <span class="number">4</span>
-
-          <p>Customer first</p>
-
-        </div>
-
-      </div>
-
-      <div class="value-card">
-
-        <img src="IMG/7.jpg" alt="">
-
-        <div class="value-box">
-
-          <span class="number">5</span>
-
-          <p>Customer first</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-<button class="arrow right">&#10095;</button>
-
-
- </div>
-</section>
-
-
-
-
 
 
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -329,9 +312,10 @@
         <div class="footer-contenido">
 
             <div class="columna">
-                <img src="IMG/logo 2.png" alt="logo VIVRA"> <a href="#">Aviso legal</a>
-
-                <a href="#">Política de privacidad</a> <a href="#">Política de cookies</a>
+                <img src="IMG/logo 2.png" alt="logo VIVRA">
+                <a href="HTML/avisolegal.html">Aviso legal</a>
+                <a href="HTML/privacidad.html">Política de privacidad</a>
+                <a href="HTML/cookies.html">Política de cookies</a>
             </div>
 
             <div class="columna">
@@ -351,18 +335,17 @@
 
         <p>&copy; 2026 Vivra.</p>
 
-        <div class="iconos"> 
-            <a href="https://www.instagram.com/"><img src="IMG/red2.jpeg"></a> <a
-                href="https://www.tiktok.com/en/"><img src="IMG/red1.jpeg"></a> </div>
-
-
+        <div class="iconos">
+            <a href="https://www.instagram.com/"><img src="IMG/red2.jpeg"></a> <a href="https://www.tiktok.com/en/"><img
+                    src="IMG/red1.jpeg"></a>
+        </div>
 
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="JS/estilos.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 

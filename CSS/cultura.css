@@ -1,0 +1,129 @@
+
+
+.p-1 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.p-1 .slider {
+  position: absolute;
+  inset: 0;
+}
+
+.p-1 .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.p-1 .slide.active {
+  opacity: 1;
+}
+
+.p-1 .contenido1 {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding: 16px;
+  max-width: 100%;
+  color: white;
+}
+
+.p-1 .titulo {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.p-1 .p1 {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+
+
+
+
+.p-1 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.p-1 .fondo-img {
+  position: absolute;
+  inset: 0;
+  background-image: url('/IMG/img2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+
+.p-1 .contenido5 {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 2;
+
+  padding: 16px;
+  max-width: 100%;
+  color: white;
+}
+
+.p-1 .titulo {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.p-1 .p1 {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+
+
+
+
+
+
+
+
+
+
+  .p-1 .contenido5 {
+    padding: 48px;
+    max-width: 550px;
+    bottom: 60px;
+  }
+
+  .p-1 .titulo {
+    font-size: 2.8rem;
+  }
+
+  .p-1 .p1 {
+    font-size: 1.1rem;
+  }
+}
