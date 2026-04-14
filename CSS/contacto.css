@@ -1,7 +1,6 @@
 
 
 
-/* HERO */
 .hero {
   padding: 48px 24px 40px;
   background: #ffffff;
@@ -15,7 +14,6 @@
   color: var(--dark);
 }
 
-/* INTRO */
 .intro {
  background-color: rgb(177, 182, 255);
   margin: 0 16px;
@@ -143,6 +141,7 @@
 
 
 /* DESKTOP */
+
 @media (min-width: 768px) {
 
   .hero { padding: 64px 48px 48px; }
