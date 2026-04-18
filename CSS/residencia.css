@@ -11,7 +11,7 @@ body {
 .fondo-img {
   position: absolute;
   inset: 0;
-  background-image: url('../IMG/img2.jpg'); 
+  background-image: url('../IMG/img2.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -35,7 +35,7 @@ body {
 .p-1 .p1 {
   font-size: 0.95rem;
   opacity: 0.9;
-  margin: 0;
+  margin: 0 0 16px 0;
 }
 
 #carrousel-container {
@@ -84,6 +84,7 @@ body {
   inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
   z-index: 1;
+  pointer-events: none;
 }
 
 .panel1 {
@@ -126,20 +127,52 @@ body {
 }
 
 .btn-panel {
+  position: relative;
   display: inline-block;
-  padding: 8px 16px;
-  background: #fff;
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid #1b19a8;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: color 0.3s ease, padding 0.3s ease;
+  isolation: isolate;
+}
+
+.btn-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 100% 0 0;
+  background: #1b19a8;
+  z-index: -1;
+  transition: right 0.3s ease;
+}
+
+.btn-panel::after {
+  content: "→";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+  opacity: 0;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease, transform 0.3s ease, right 0.3s ease;
 }
 
 .btn-panel:hover {
-  background: #000;
-  color: #fff;
+  color: white;
+  padding: 10px 45px 10px 15px;
+}
+
+.btn-panel:hover::before {
+  right: 0;
+}
+
+.btn-panel:hover::after {
+  right: 10px;
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 .panel.active {
@@ -222,11 +255,10 @@ body {
 }
 
 .collab-dot.active {
-  background: #111;
+  background: #000000;
 }
 
 
-/* DESKTOP */
 
 @media (min-width: 1024px) {
 
@@ -260,6 +292,19 @@ body {
 
   .panel-content p {
     font-size: 16px;
+  }
+
+  .btn-panel {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+  }
+
+  .btn-panel:hover {
+    padding: 12px 50px 12px 18px;
+  }
+
+  .btn-panel:hover::after {
+    right: 12px;
   }
 
   .seccion-colaboraciones {
