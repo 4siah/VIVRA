@@ -2,6 +2,7 @@ body {
   overflow-x: hidden;
 }
 
+/* HERO */
 .p-1 {
   position: relative;
   height: 100vh;
@@ -26,7 +27,6 @@ body {
   padding: 16px;
   max-width: 90%;
   color: white;
-  margin-bottom: 0;
 }
 
 .p-1 .titulo {
@@ -41,6 +41,7 @@ body {
   margin: 0;
 }
 
+/* CARROUSEL TEXTO */
 #carrousel-container {
   position: relative;
   z-index: 1;
@@ -57,14 +58,15 @@ body {
 }
 
 @keyframes carrousel-loop {
-  0% { transform: translateZ(0); }
-  to { transform: translate3d(-50%, 0, 0); }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
+/* PANELES */
 .contenedor-a-2 {
   display: flex;
   width: 100vw;
-  flex-direction: row;
 }
 
 .panel {
@@ -73,12 +75,21 @@ body {
   height: 40vh;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
   position: relative;
   transition: flex 0.7s ease-in;
+  overflow: hidden;
+}
+
+/* Overlay oscuro para mejor lectura */
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  z-index: 1;
 }
 
 .panel1 {
@@ -93,52 +104,77 @@ body {
   background-image: url('https://images.unsplash.com/photo-1606059100151-b09b22709477?auto=format&fit=crop&w=1778&q=80');
 }
 
-.panel h3 {
-  font-size: 18px;
+/* CONTENIDO NUEVO */
+.panel-content {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  margin: 0;
+  bottom: 50px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
   opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
 }
 
+.panel.active .panel-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.panel-content h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.panel-content p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+/* BOTÓN */
+.btn-panel {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-panel:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* PANEL ACTIVO */
 .panel.active {
   flex: 3;
-  align-items: center;
 }
 
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.3s;
-}
-
-/* ===== SECCIÓN COLABORACIONES ===== */
-
+/* COLABORACIONES */
 .seccion-colaboraciones {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 16px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-/* IMAGEN — mobile primero */
 .collab-slider {
   border-radius: 20px;
   overflow: hidden;
   height: 320px;
   position: relative;
-  flex-shrink: 0;
 }
 
 .collab-slide {
   display: none;
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .collab-slide.active {
@@ -149,77 +185,60 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  display: block;
 }
 
-/* TEXTO — mobile */
 .collab-card-texto {
-  background-color: transparent;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
   height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-shrink: 0;
 }
 
 .collab-slide-texto {
   display: none;
-  flex-direction: column;
-  gap: 12px;
   position: absolute;
   inset: 0;
-  padding: 32px 28px 36px;
-  z-index: 2;
+  padding: 32px;
 }
 
 .collab-slide-texto.active {
   display: flex;
+  flex-direction: column;
 }
 
 .collab-tag {
   font-size: 0.65rem;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #111;
-  font-weight: 400;
 }
 
 .collab-titulo {
   font-size: 1.7rem;
-  line-height: 1.22;
-  color: #111;
   font-weight: 700;
 }
 
-/* DOTS */
 .collab-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
-  padding: 12px 0 4px;
+  padding: 12px 0;
 }
 
 .collab-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #ccc;
+  background: #ffffff;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 .collab-dot.active {
   background: #111;
 }
 
-/* ===== DESKTOP ===== */
+
+
+/* DESKTOP */
+
 
 @media (min-width: 1024px) {
 
@@ -237,10 +256,6 @@ body {
     font-size: 1.1rem;
   }
 
-  .contenedor-a-2 {
-    width: 100%;
-  }
-
   .panel {
     height: 80vh;
     margin: 10px;
@@ -251,58 +266,26 @@ body {
     flex: 5;
   }
 
-  .panel h3 {
+  .panel-content h3 {
     font-size: 24px;
   }
 
-  /* imagen izquierda, texto derecha — como la foto 1 */
+  .panel-content p {
+    font-size: 16px;
+  }
+
   .seccion-colaboraciones {
     flex-direction: row;
-    padding: 24px;
-    gap: 16px;
-    align-items: stretch;
     height: 580px;
   }
 
   .collab-slider {
-    flex: 1 1 50%;
-    border-radius: 28px;
+    flex: 1;
     height: 100%;
-    order: 1; /* imagen a la izquierda */
-  }
-
-  .collab-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .collab-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
   }
 
   .collab-card-texto {
-    flex: 1 1 45%;
-    border-radius: 28px;
+    flex: 1;
     height: 100%;
-    order: 2; /* texto a la derecha */
-  }
-
-  .collab-slide-texto {
-    padding: 48px 44px 52px;
-  }
-
-  .collab-tag {
-    font-size: 0.7rem;
-  }
-
-  .collab-titulo {
-    font-size: 2.6rem;
-    line-height: 1.18;
   }
 }
