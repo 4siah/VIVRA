@@ -4,19 +4,22 @@ document.querySelectorAll('.option').forEach(option => {
         option.classList.add('active');
     });
 });
- 
+
+
+
 /* TITULO ANIMADO */
+
 let text = "  VIVRA - Residencia + Cultura ";
 let i = 0;
 setInterval(() => {
   document.title = text.substring(i) + text.substring(0, i);
   i = (i + 1) % text.length;
 }, 200);
- 
+
 /* MAPA */
 if (document.getElementById('google-map')) {
   const map = L.map('google-map').setView([38.2699, -0.7126], 13);
- 
+
   L.tileLayer(
     'https://api.maptiler.com/maps/dataviz-v4-light/{z}/{x}/{y}.png?key=Zt76kWR3LMnw6cRITH2c',
     {
@@ -25,7 +28,7 @@ if (document.getElementById('google-map')) {
       zoomOffset: -1,
     }
   ).addTo(map);
- 
+
   const markers = [
     {
       locationName: 'Universidad UMH, Miguel Hernández.',
@@ -46,12 +49,12 @@ if (document.getElementById('google-map')) {
       address: 'Avinguda de Candalix, s/n, 03202 Elx, Alicante',
     },
   ];
- 
+
   const fehIcon = L.icon({
     iconUrl: './IMG/logo_sinfondo.png',
     iconSize: [40, 40],
   });
- 
+
   markers.forEach((m) => {
     L.marker([m.lat, m.lng], { icon: fehIcon })
       .addTo(map)
@@ -63,11 +66,12 @@ if (document.getElementById('google-map')) {
       `);
   });
 }
- 
-const track = document.querySelector('.values-track');
-const btnLeft = document.querySelector('.arrow.left');
-const btnRight = document.querySelector('.arrow.right');
- 
+
+
+const track = document.querySelector('.s-6-info-tarjeta');
+const btnLeft = document.querySelector('.flecha-izquierda');
+const btnRight = document.querySelector('.flecha-derecha');
+
 if (track && btnLeft && btnRight) {
   btnRight.addEventListener('click', () => {
     track.scrollBy({ left: 340, behavior: 'smooth' });
@@ -76,12 +80,12 @@ if (track && btnLeft && btnRight) {
     track.scrollBy({ left: -340, behavior: 'smooth' });
   });
 }
- 
+
 document.addEventListener('DOMContentLoaded', function () {
   var videoPlayButton,
       videoWrapper = document.querySelector('.video-wrapper'),
       video = document.querySelector('.video-custom');
- 
+
   if (videoWrapper && video && videoWrapper.contains(video)) {
     const videoMethods = {
       renderVideoPlayButton: function() {
@@ -108,11 +112,11 @@ document.addEventListener('DOMContentLoaded', function () {
     videoMethods.renderVideoPlayButton();
   }
 });
- 
+
 const s6track = document.querySelector('.s-6-track');
 const flecha1 = document.querySelector('.flecha1');
 const flecha2 = document.querySelector('.flecha2');
- 
+
 if (s6track && flecha1 && flecha2) {
   const ancho = () => s6track.querySelector('.s-6-card').offsetWidth + 16;
   flecha1.addEventListener('click', () => {
@@ -122,9 +126,9 @@ if (s6track && flecha1 && flecha2) {
     s6track.scrollBy({ left: ancho(), behavior: 'smooth' });
   });
 }
- 
+
 const footer = document.querySelector('.footer');
- 
+
 if (footer) {
   function mostrarFooter() {
     const footerTop = footer.getBoundingClientRect().top;
@@ -132,13 +136,14 @@ if (footer) {
       footer.classList.add('visible');
     }
   }
- 
+
   window.addEventListener('scroll', mostrarFooter);
   window.addEventListener('load', mostrarFooter);
   document.addEventListener('DOMContentLoaded', mostrarFooter);
   mostrarFooter();
 }
- 
+
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -148,15 +153,9 @@ const observer = new IntersectionObserver((entries) => {
 }, {
   threshold: 0.15
 });
- 
-document.querySelectorAll('.s-2, .s-3, .s-4, .values, .card, .value-card, .video-wrapper, .caja')
+
+document.querySelectorAll('.s-2, .s-3, .s-4, .s-5-cards, .card, .s-6-info, .video-wrapper, .caja')
   .forEach(el => observer.observe(el));
-
-
-
-
-
-
 
 const panels = document.querySelectorAll(".panel");
 
@@ -173,10 +172,6 @@ const removeActiveClasses = () => {
   });
 };
 
-
-
-
-
 const slides = document.querySelectorAll('.p-1 .slide');
 let index = 0;
 
@@ -185,3 +180,29 @@ setInterval(() => {
   index = (index + 1) % slides.length;
   slides[index].classList.add('active');
 }, 4000);
+
+const collabSlides = document.querySelectorAll('.collab-slide');
+const collabTextos = document.querySelectorAll('.collab-slide-texto');
+const collabDots = document.querySelectorAll('.collab-dot');
+
+if (collabSlides.length && collabDots.length) {
+  let collabCurrent = 0;
+
+  function goTo(index) {
+    collabSlides.forEach(s => s.classList.remove('active'));
+    collabTextos.forEach(t => t.classList.remove('active'));
+    collabDots.forEach(d => d.classList.remove('active'));
+    collabSlides[index].classList.add('active');
+    collabTextos[index].classList.add('active');
+    collabDots[index].classList.add('active');
+    collabCurrent = index;
+  }
+
+  collabDots.forEach(dot => {
+    dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index)));
+  });
+
+  setInterval(() => {
+    goTo((collabCurrent + 1) % collabSlides.length);
+  }, 3000);
+}
