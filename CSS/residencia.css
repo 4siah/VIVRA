@@ -11,7 +11,7 @@ body {
 .fondo-img {
   position: absolute;
   inset: 0;
-  background-image: url('./IMG/img2.jpg');
+  background-image: url('../IMG/img2.jpg');
   background-size: cover;
   background-position: center;
 }
