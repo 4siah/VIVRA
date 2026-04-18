@@ -1,323 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Vivra - Residencia + Cultura.</title>
-    <link rel="stylesheet" href="CSS/estilos.css">
-    <link rel="stylesheet" href="CSS/inicio.css">
-    <link rel="stylesheet" href="CSS/residencia.css">
-    <link rel="stylesheet" href="CSS/cultura.css">
-    <link rel="stylesheet" href="CSS/contacto.css">
-    <link rel="stylesheet" href="CSS/carrousel.css">
+    <title>Vivra - Residencia + Cultura.</title>
+    <link rel="stylesheet" href="/CSS/estilos.css">
+    <link rel="stylesheet" href="/CSS/inicio.css">
+    <link rel="stylesheet" href="/CSS/residencia.css">
+    <link rel="stylesheet" href="/CSS/cultura.css">
+    <link rel="stylesheet" href="/CSS/contacto.css">
+    <link rel="stylesheet" href="/CSS/carrousel.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zjz2wcm.css">
-    <script src="app.js" defer></script>
+    <link rel="icon" type="image/png" href="/FAVICON/favicon-16x16.png">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <link rel="icon" type="image/png" href="FAVICON/favicon-16x16.png">
 </head>
-
+ 
 <body>
-
-    <div class="navigation-main"> <input class="input" type="checkbox" id="menuToggle"> <label class="label"
-            for="menuToggle"> <span class="icon"> <img src="IMG/logo_sinfondo.png" alt="logo Vivra"> </span> </label>
+ 
+    <div class="navigation-main">
+        <input class="input" type="checkbox" id="menuToggle">
+        <label class="label" for="menuToggle">
+            <span class="icon"><img src="/IMG/logo_sinfondo.png" alt="logo Vivra"></span>
+        </label>
         <nav class="menu-nav">
             <ul class="list">
-                <li class="item"><a class="link" href="index.html">Inicio</a></li>
-                <li class="item"><a class="link" href="HTML/residencia.html">Residencia</a></li>
-                <li class="item"><a class="link" href="HTML/cultura.html">Cultura+</a></li>
-                <li class="item"><a class="link" href="HTML/contacto.html">Sobre Vivra</a></li>
+                <li class="item"><a class="link" href="/index.html">Inicio</a></li>
+                <li class="item"><a class="link" href="/HTML/residencia.html">Residencia</a></li>
+                <li class="item"><a class="link" href="/HTML/cultura.html">Cultura+</a></li>
+                <li class="item"><a class="link" href="/HTML/contacto.html">Sobre Vivra</a></li>
             </ul>
         </nav>
     </div>
-
+ 
     <main>
         <section class="s-1">
-
-
-            <div class="fondo"> <video autoplay muted loop playsinline>
-                    <source src="VIDS/video.mp4" type="video/mp4">
-
+            <div class="fondo">
+                <video autoplay muted loop playsinline>
+                    <source src="/VIDS/video.mp4" type="video/mp4">
                 </video>
             </div>
-
             <div class="contenido1">
-
-                <h1 class="titulo"> Donde <span class="palabra1">vivir</span> es solo el comienzo. </h1>
-
-                <p class="p1"> La primera residencia en Elche donde vivir también es cultura.</p>
-                <a href="HTML/residencia.html" class="btn">
-                    Descubre más
-                </a>
+                <h1 class="titulo">Donde <span class="palabra1">vivir</span> es solo el comienzo.</h1>
+                <p class="p1">La primera residencia en Elche donde vivir también es cultura.</p>
+                <a href="/HTML/residencia.html" class="btn">Descubre más</a>
             </div>
-
         </section>
-
-
+ 
         <section class="s-2">
-
-
             <section class="carrusel_movil">
-
-                <div class="carrusel_movil_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                <div class="carrusel_movil_item"> <img src="IMG/lo.png" class="carr_img"> </div>
-                <div class="carrusel_movil_item"> <img src="IMG/Mesa de trabajo 1@3x.png" class="carr_img"> </div>
-                <div class="carrusel_movil_item"> <img src="IMG/Mesa de trabajo 1@3x.png" class="carr_img"> </div>
-                <div class="carrusel_movil_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-
-
-
+                <div class="carrusel_movil_item"><img src="/IMG/ceu.png" class="carr_img" alt=""></div>
+                <div class="carrusel_movil_item"><img src="/IMG/lo.png" class="carr_img" alt=""></div>
+                <div class="carrusel_movil_item"><img src="/IMG/Mesa de trabajo 1@3x.png" class="carr_img" alt=""></div>
+                <div class="carrusel_movil_item"><img src="/IMG/Mesa de trabajo 1@3x.png" class="carr_img" alt=""></div>
+                <div class="carrusel_movil_item"><img src="/IMG/ceu.png" class="carr_img" alt=""></div>
             </section>
+ 
             <section id="carrusel">
                 <div class="carr_grupo">
-                    <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                    <div class="carrusel_item"> <img src="IMG/lo.png" class="carr_img"> </div>
-                    <div class="carrusel_item"> <img src="IMG/Mesa de trabajo 1@3x.png" class="carr_img"> </div>
-                    <div class="carrusel_item"> <img src="IMG/de.png" class="carr_img"> </div>
-
-
-
+                    <div class="carrusel_item"><img src="/IMG/ceu.png" class="carr_img" alt=""></div>
+                    <div class="carrusel_item"><img src="/IMG/lo.png" class="carr_img" alt=""></div>
+                    <div class="carrusel_item"><img src="/IMG/Mesa de trabajo 1@3x.png" class="carr_img" alt=""></div>
+                    <div class="carrusel_item"><img src="/IMG/de.png" class="carr_img" alt=""></div>
                 </div>
                 <div class="carr_grupo">
-                    <div class="carrusel_item"> <img src="IMG/ceu.png" class="carr_img"> </div>
-                    <div class="carrusel_item"> <img src="IMG/lo.png" class="carr_img"> </div>
-                    <div class="carrusel_item"> <img src="IMG/Mesa de trabajo 1@3x.png" class="carr_img"> </div>
-                    <div class="carrusel_item"> <img src="IMG/de.png" class="carr_img"> </div>
-
-
+                    <div class="carrusel_item"><img src="/IMG/ceu.png" class="carr_img" alt=""></div>
+                    <div class="carrusel_item"><img src="/IMG/lo.png" class="carr_img" alt=""></div>
+                    <div class="carrusel_item"><img src="/IMG/Mesa de trabajo 1@3x.png" class="carr_img" alt=""></div>
+                    <div class="carrusel_item"><img src="/IMG/de.png" class="carr_img" alt=""></div>
                 </div>
             </section>
-
+ 
             <h2 class="s-2 texto1">Tu experiencia <span class="destacado">comienza</span> aquí.</h2>
-
+ 
             <div class="cards">
-
-                <div class="card"> <img src="IMG/pruebaa.jpeg" alt="" srcset="">
-
+                <div class="card">
+                    <img src="/IMG/pruebaa.jpeg" alt="">
                     <div class="contenido-2">
-
                         <h3>Vive la experiencia completa</h3>
-
-                        <p>Eventos y actividades que hacen tu etapa universitaria inolvidable.</p> <a href="#">Descubre
-                            más </a>
+                        <p>Eventos y actividades que hacen tu etapa universitaria inolvidable.</p>
+                        <a href="#">Descubre más</a>
                     </div>
-
                 </div>
-
-                <div class="card"> <img src="IMG/X.jpeg" alt="" srcset="">
-
+                <div class="card">
+                    <img src="/IMG/X.jpeg" alt="">
                     <div class="contenido-2">
-
                         <h3>Haz comunidad</h3>
-
-                        <p>Conecta con estudiantes y crea amistades dentro y fuera del campus.</p> <a href="#">Únete</a>
-
+                        <p>Conecta con estudiantes y crea amistades dentro y fuera del campus.</p>
+                        <a href="#">Únete</a>
                     </div>
-
                 </div>
-
-                <div class="card"> <img src="IMG/n.png" alt="" srcset="">
-
+                <div class="card">
+                    <img src="/IMG/n.png" alt="">
                     <div class="contenido-2">
-
                         <h3>Impulsa tu crecimiento</h3>
-
-                        <p>Participa en experiencias que mejoran tus habilidades personales.</p> <a href="#">Explora</a>
+                        <p>Participa en experiencias que mejoran tus habilidades personales.</p>
+                        <a href="#">Explora</a>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
+ 
         <div class="marquee">
-            <div class="marquee-texto"> <span> VIVRA · vive también cultura · estudia · vive · comparte · crea ·
-                    comunidad · elche ·
-                </span> <span> VIVRA · vive también cultura · estudia · vive · comparte · crea ·
-                    comunidad · elche ·
-                </span> <span> VIVRA · vive también cultura · estudia · vive · comparte · crea ·
-                    comunidad · elche ·
-                </span> <span> VIVRA · vive también cultura · estudia · vive · comparte · crea ·
-                    comunidad · elche ·
-                </span> <span> VIVRA · vive también cultura · estudia · vive · comparte · crea ·
-                    comunidad · elche ·
-                </span> <span> VIVRA · vive también cultura · estudia · vive · comparte · crea ·
-                    comunidad · elche ·
-                </span> <span> VIVRA · vive también cultura · estudia · vive · comparte · crea ·
-                    comunidad · elche ·
-                </span>
+            <div class="marquee-texto">
+                <span>VIVRA · vive también cultura · estudia · vive · comparte · crea · comunidad · elche · </span>
+                <span>VIVRA · vive también cultura · estudia · vive · comparte · crea · comunidad · elche · </span>
+                <span>VIVRA · vive también cultura · estudia · vive · comparte · crea · comunidad · elche · </span>
+                <span>VIVRA · vive también cultura · estudia · vive · comparte · crea · comunidad · elche · </span>
+                <span>VIVRA · vive también cultura · estudia · vive · comparte · crea · comunidad · elche · </span>
+                <span>VIVRA · vive también cultura · estudia · vive · comparte · crea · comunidad · elche · </span>
+                <span>VIVRA · vive también cultura · estudia · vive · comparte · crea · comunidad · elche · </span>
             </div>
-
         </div>
-
+ 
         <section class="s-3">
-
             <div class="container-mapa">
-
                 <div class="mapa">
-
                     <div id="google-map"></div>
-
                 </div>
                 <div class="contenido">
-
-                    <div class="mapa-card"> <span class="mapa-label">MAPA</span> <a href="#"
-                            class="mapa-flecha">&nearr;</a>
-
-                        <p class="mapa-texto"> Explora el mapa interactivo para localizar los diferentes campus en
-                            Elche.
-
-                        </p>
-
+                    <div class="mapa-card">
+                        <span class="mapa-label">MAPA</span>
+                        <a href="#" class="mapa-flecha">&nearr;</a>
+                        <p class="mapa-texto">Explora el mapa interactivo para localizar los diferentes campus en Elche.</p>
                         <a href="#" class="mapa-btn">EXPLORA</a>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
+ 
         <section class="s-4">
-
             <div class="container">
-
-                <h2 class="titulos"> Un espacio <span class="destacado">pensado</span> para estudiantes </h2>
-
-                <p class="texto2"> Diseñado para una nueva forma de vivir la universidad: flexible, social y llena de
-                    experiencias que van más allá del aula. </p>
-
-                <div class="boton"> <a href="#" class="btn-outline">Residencias</a> </div>
-
+                <h2 class="titulos">Un espacio <span class="destacado">pensado</span> para estudiantes</h2>
+                <p class="texto2">Diseñado para una nueva forma de vivir la universidad: flexible, social y llena de
+                    experiencias que van más allá del aula.</p>
+                <div class="boton"><a href="#" class="btn-outline">Residencias</a></div>
                 <div class="grid">
-
                     <div class="caja caja1">comunidad</div>
                     <div class="caja caja2">que</div>
                     <div class="caja caja3">→</div>
                     <div class="caja caja4">cuida</div>
-
                 </div>
-
             </div>
-
         </section>
-
-        </div>
-
+ 
+        <section class="s-5-cards">
+            <h2 class="s-5-titulo">Lo que te <span class="destacado">ofrece</span> <u>VIVRA</u></h2>
+            <div class="s-5-contenedor-card">
+                <button class="flecha-izquierda">&#10094;</button>
+                <div class="s-6-info-tarjeta">
+                    <div class="s-6-info">
+                        <img src="/IMG/7.jpg" alt="">
+                        <div class="s-6-caja">
+                            <span class="numero">1</span>
+                            <p>Habitaciones modernas y equipadas</p>
+                        </div>
+                    </div>
+                    <div class="s-6-info">
+                        <img src="/IMG/7.jpg" alt="">
+                        <div class="s-6-caja">
+                            <span class="numero">2</span>
+                            <p>Zonas comunes para estudiar y socializar</p>
+                        </div>
+                    </div>
+                    <div class="s-6-info">
+                        <img src="/IMG/7.jpg" alt="">
+                        <div class="s-6-caja">
+                            <span class="numero">3</span>
+                            <p>Programación cultural incluida</p>
+                        </div>
+                    </div>
+                    <div class="s-6-info">
+                        <img src="/IMG/7.jpg" alt="">
+                        <div class="s-6-caja">
+                            <span class="numero">4</span>
+                            <p>Comunidad activa de estudiantes</p>
+                        </div>
+                    </div>
+                    <div class="s-6-info">
+                        <img src="/IMG/7.jpg" alt="">
+                        <div class="s-6-caja">
+                            <span class="numero">5</span>
+                            <p>Ubicación estratégica en Elche</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="flecha-derecha">&#10095;</button>
+            </div>
         </section>
-
-        </section>
-
-<section class="s-5-cards">
-    
-    <h2 class="s-5-titulo">Lo que te <span class="destacado">ofrece</span> <u>VIVRA</u></h2>
-
-    <div class="s-5-contenedor-card">
-        <button class="flecha-izquierda">&#10094;</button>
-
-        <div class="s-6-info-tarjeta">
-
-            <div class="s-6-info">
-                <img src="IMG/7.jpg" alt="">
-                <div class="s-6-caja">
-                    <span class="numero">1</span>
-                    <p>Transparency work</p>
-                </div>
-            </div>
-
-            <div class="s-6-info">
-                <img src="IMG/7.jpg" alt="">
-                <div class="s-6-caja">
-                    <span class="numero">2</span>
-                    <p>Make a difference every day</p>
-                </div>
-            </div>
-
-            <div class="s-6-info">
-                <img src="IMG/7.jpg" alt="">
-                <div class="s-6-caja">
-                    <span class="numero">3</span>
-                    <p>Customer first</p>
-                </div>
-            </div>
-
-            <div class="s-6-info">
-                <img src="IMG/7.jpg" alt="">
-                <div class="s-6-caja">
-                    <span class="numero">4</span>
-                    <p>Customer first</p>
-                </div>
-            </div>
-
-            <div class="s-6-info">
-                <img src="IMG/7.jpg" alt="">
-                <div class="s-6-caja">
-                    <span class="numero">5</span>
-                    <p>Customer first</p>
-                </div>
-            </div>
-
-        </div>
-
-        <button class="flecha-derecha">&#10095;</button>
-    </div>
-</section>
-
-
-
+ 
         <div class="video-wrapper">
             <video class="video-custom" src="/VIDS/animática VIVRA.mp4" muted playsinline></video>
         </div>
-
-
     </main>
-
-
-
+ 
     <footer class="footer">
-
         <div class="footer-contenido">
-
             <div class="columna">
-                <img src="IMG/logo 2.png" alt="logo VIVRA">
-                <a href="HTML/avisolegal.html">Aviso legal</a>
-                <a href="HTML/privacidad.html">Política de privacidad</a>
-                <a href="HTML/cookies.html">Política de cookies</a>
+                <img src="/IMG/logo 2.png" alt="logo VIVRA">
+                <a href="/HTML/avisolegal.html">Aviso legal</a>
+                <a href="/HTML/privacidad.html">Política de privacidad</a>
+                <a href="/HTML/cookies.html">Política de cookies</a>
             </div>
-
             <div class="columna">
-                <a href="index.html">Inicio</a>
-                <a href="/HTML/residencia.html">Residencia</a> 
-                <a href="/HTML/cultura.html">Cultura</a> 
+                <a href="/index.html">Inicio</a>
+                <a href="/HTML/residencia.html">Residencia</a>
+                <a href="/HTML/cultura.html">Cultura</a>
                 <a href="/HTML/contacto.html">Sobre Vivra</a>
             </div>
-
             <div class="columna">
                 <span>hola@vivra.es</span>
                 <span>+34 671 381 177</span>
             </div>
         </div>
-
     </footer>
-
+ 
     <div class="footer-bottom">
-
         <p>&copy; 2026 Vivra.</p>
-
         <div class="iconos">
-            <a href="https://www.instagram.com/"><img src="IMG/red2.jpeg"></a> <a href="https://www.tiktok.com/en/"><img
-                    src="IMG/red1.jpeg"></a>
+            <a href="https://www.instagram.com/"><img src="/IMG/red2.jpeg" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/en/"><img src="/IMG/red1.jpeg" alt="TikTok"></a>
         </div>
-
-
     </div>
+ 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="JS/estilos.js"></script>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/JS/estilos.js"></script>
+ 
 </body>
-
 </html>
+ 
