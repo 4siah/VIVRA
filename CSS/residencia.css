@@ -249,15 +249,13 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #ffffff;
+  background: #1b19a8;
   cursor: pointer;
 }
 
 .collab-dot.active {
-  background: #000000;
+  background: #ed832b;
 }
-
-
 
 @media (min-width: 1024px) {
 
