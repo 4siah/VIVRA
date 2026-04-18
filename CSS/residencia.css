@@ -8,14 +8,12 @@ body {
   overflow: hidden;
 }
 
-.p-1 .fondo-img {
+.fondo-img {
   position: absolute;
   inset: 0;
-  background-image: url('/IMG/img2.jpg');
+  background-image: url('../IMG/img2.jpg'); 
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
 }
 
 .p-1 .contenido5 {
@@ -228,9 +226,7 @@ body {
 }
 
 
-
 /* DESKTOP */
-
 
 @media (min-width: 1024px) {
 
