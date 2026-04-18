@@ -2,7 +2,6 @@ body {
   overflow-x: hidden;
 }
 
-/* HERO */
 .p-1 {
   position: relative;
   height: 100vh;
@@ -41,7 +40,6 @@ body {
   margin: 0;
 }
 
-/* CARROUSEL TEXTO */
 #carrousel-container {
   position: relative;
   z-index: 1;
@@ -63,7 +61,6 @@ body {
   }
 }
 
-/* PANELES */
 .contenedor-a-2 {
   display: flex;
   width: 100vw;
@@ -83,7 +80,6 @@ body {
   overflow: hidden;
 }
 
-/* Overlay oscuro para mejor lectura */
 .panel::before {
   content: "";
   position: absolute;
@@ -104,7 +100,6 @@ body {
   background-image: url('https://images.unsplash.com/photo-1606059100151-b09b22709477?auto=format&fit=crop&w=1778&q=80');
 }
 
-/* CONTENIDO NUEVO */
 .panel-content {
   position: absolute;
   bottom: 50px;
@@ -132,7 +127,6 @@ body {
   opacity: 0.9;
 }
 
-/* BOTÓN */
 .btn-panel {
   display: inline-block;
   padding: 8px 16px;
@@ -150,12 +144,10 @@ body {
   color: #fff;
 }
 
-/* PANEL ACTIVO */
 .panel.active {
   flex: 3;
 }
 
-/* COLABORACIONES */
 .seccion-colaboraciones {
   display: flex;
   flex-direction: column;
