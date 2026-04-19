@@ -1,12 +1,8 @@
 
-/* CARRUSEL TAMAÑO MÓVIL */
-/* ********************* */
-
 .carrusel_movil {
-    /* PONEMOS LAS IMÁGENES EN MODO FLEXIBLE Y OCULTAMOS EL DESBORDAMIENTO */
+  
     display: flex;
     overflow: hidden;
-    /* posicionamos relativo para que su texto se pueda poner en absoluto sobre este contenedor */
     position: relative;
 }
 

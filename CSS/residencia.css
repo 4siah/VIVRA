@@ -11,10 +11,21 @@ body {
 .fondo-img {
   position: absolute;
   inset: 0;
-  background-image: url('../IMG/img2.jpg');
+  background-image: url('../IMG/1.jpeg');
   background-size: cover;
   background-position: center;
+
 }
+
+.fondo-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2));
+}
+
 
 .p-1 .contenido5 {
   position: absolute;
@@ -71,11 +82,12 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   position: relative;
   transition: flex 0.7s ease-in;
   overflow: hidden;
+
 }
 
 .panel::before {
@@ -84,18 +96,20 @@ body {
   inset: 0;
   z-index: 1;
   pointer-events: none;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .panel1 {
-  background-image: url('https://images.unsplash.com/photo-1610212570473-6015f631ae96?auto=format&fit=crop&w=1350&q=80');
+  background-image: url(/IMG/umh.webp);
 }
 
 .panel2 {
-  background-image: url('https://images.unsplash.com/photo-1606838830438-5f380a664a4e?auto=format&fit=crop&w=1350&q=80');
+  background-image: url(/IMG/CEU2.png);
 }
 
 .panel3 {
-  background-image: url('https://images.unsplash.com/photo-1606059100151-b09b22709477?auto=format&fit=crop&w=1778&q=80');
+
+  background-image: url(/IMG/UNED1.png);
 }
 
 .panel-content {
@@ -257,6 +271,9 @@ body {
   background: #ed832b;
 }
 
+
+
+
 @media (min-width: 1024px) {
 
   .p-1 .contenido5 {
@@ -266,7 +283,7 @@ body {
   }
 
   .p-1 .titulo {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 
   .p-1 .p1 {
