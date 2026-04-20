@@ -45,6 +45,10 @@ body {
   margin: 0 0 16px 0;
 }
 
+
+
+
+
 #carrousel-container {
   position: relative;
   z-index: 1;
@@ -65,6 +69,11 @@ body {
     transform: translate3d(-50%, 0, 0);
   }
 }
+
+
+
+
+
 
 .contenedor-a-2 {
   display: flex;
@@ -94,15 +103,15 @@ body {
 }
 
 .panel1 {
-  background-image: url(/IMG/umh.webp);
+  background-image: url("../IMG/umh.webp");
 }
 
 .panel2 {
-  background-image: url(/IMG/CEU2.png);
+  background-image: url("../IMG/CEU2.png");
 }
 
 .panel3 {
-  background-image: url(/IMG/UNED1.png);
+  background-image: url("../IMG/UNED1.png");
 }
 
 .panel-content {
