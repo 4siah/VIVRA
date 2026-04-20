@@ -14,18 +14,14 @@ body {
   background-image: url('../IMG/1.jpeg');
   background-size: cover;
   background-position: center;
-
 }
 
 .fondo-img::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.2));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
 }
-
 
 .p-1 .contenido5 {
   position: absolute;
@@ -60,8 +56,8 @@ body {
 #carrousel {
   display: inline-block;
   font-size: 8rem;
-  animation: carrousel-loop 15s linear infinite;
   white-space: nowrap;
+  animation: carrousel-loop 15s linear infinite;
 }
 
 @keyframes carrousel-loop {
@@ -82,21 +78,19 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  color: #ffffff;
+  color: white;
   cursor: pointer;
   position: relative;
   transition: flex 0.7s ease-in;
   overflow: hidden;
-
 }
 
 .panel::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 1;
-  pointer-events: none;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .panel1 {
@@ -108,7 +102,6 @@ body {
 }
 
 .panel3 {
-
   background-image: url(/IMG/UNED1.png);
 }
 
@@ -120,7 +113,7 @@ body {
   z-index: 2;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .panel.active .panel-content {
@@ -129,147 +122,115 @@ body {
 }
 
 .panel-content h3 {
-  margin: 0 0 10px;
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .panel-content p {
   font-size: 14px;
-  margin-bottom: 12px;
   opacity: 0.9;
 }
 
 .btn-panel {
-  position: relative;
   display: inline-block;
-  color: #1b19a8;
-  text-decoration: none;
-  font-size: 1rem;
   padding: 10px 20px;
   border: 1px solid #1b19a8;
   border-radius: 30px;
-  overflow: hidden;
-  transition: color 0.3s ease, padding 0.3s ease;
-  isolation: isolate;
-}
-
-.btn-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0 100% 0 0;
-  background: #1b19a8;
-  z-index: -1;
-  transition: right 0.3s ease;
-}
-
-.btn-panel::after {
-  content: "→";
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%) translateX(-10px);
-  opacity: 0;
-  font-size: 1.2rem;
-  transition: opacity 0.3s ease, transform 0.3s ease, right 0.3s ease;
+  color: #1b19a8;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .btn-panel:hover {
+  background: #1b19a8;
   color: white;
-  padding: 10px 45px 10px 15px;
-}
-
-.btn-panel:hover::before {
-  right: 0;
-}
-
-.btn-panel:hover::after {
-  right: 10px;
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
 }
 
 .panel.active {
   flex: 3;
 }
 
-.seccion-colaboraciones {
+.p-2-contenedor {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 16px;
 }
 
-.collab-slider {
+.p-2-contenedor3 {
   border-radius: 20px;
   overflow: hidden;
   height: 320px;
   position: relative;
 }
 
-.collab-slide {
+.p-2-contenedor2 {
   display: none;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0;
 }
 
-.collab-slide.active {
+.p-2-contenedor2.active {
   display: block;
 }
 
-.collab-slide img {
+.p-2-contenedor2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.collab-card-texto {
+.p-2-card-texto {
   border-radius: 20px;
-  position: relative;
   overflow: hidden;
   height: 320px;
+  position: relative;
 }
 
-.collab-slide-texto {
+.p-2-texto1 {
   display: none;
   position: absolute;
   inset: 0;
   padding: 32px;
 }
 
-.collab-slide-texto.active {
+.p-2-texto1.active {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
-.collab-tag {
+.p-2-tag {
   font-size: 0.65rem;
   text-transform: uppercase;
 }
 
-.collab-titulo {
+.p-2-titulo {
   font-size: 1.7rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
-.collab-dots {
+.p-2-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
   padding: 12px 0;
 }
 
-.collab-dot {
+.p-2-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #1b19a8;
+  background: #f3e6e6;
   cursor: pointer;
 }
 
-.collab-dot.active {
-  background: #ed832b;
+.p-2-dot.active {
+  background: #000;
 }
+
+
 
 
 
@@ -308,30 +269,13 @@ body {
     font-size: 16px;
   }
 
-  .btn-panel {
-    font-size: 1.1rem;
-    padding: 12px 24px;
-  }
-
-  .btn-panel:hover {
-    padding: 12px 50px 12px 18px;
-  }
-
-  .btn-panel:hover::after {
-    right: 12px;
-  }
-
-  .seccion-colaboraciones {
+  .p-2-contenedor {
     flex-direction: row;
     height: 580px;
   }
 
-  .collab-slider {
-    flex: 1;
-    height: 100%;
-  }
-
-  .collab-card-texto {
+  .p-2-contenedor3,
+  .p-2-card-texto {
     flex: 1;
     height: 100%;
   }

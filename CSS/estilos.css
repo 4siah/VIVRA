@@ -308,7 +308,14 @@
             opacity: 0;
             transform: translateY(40px);
             transition: all 0.8s ease;
+            padding: 30px 60px;
         }
+
+        .footer-contenido {
+            align-items: flex-start;
+            padding-top: 10px;
+        }
+
 
 
 

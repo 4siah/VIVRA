@@ -5,17 +5,17 @@ document.querySelectorAll('.option').forEach(option => {
     });
 });
 
-
-
 /* TITULO ANIMADO */
-
 let text = "  VIVRA - Residencia + Cultura ";
 let i = 0;
-setInterval(() => {
-  document.title = text.substring(i) + text.substring(0, i);
-  i = (i + 1) % text.length;
-}, 200);
 
+if (!document.body.classList.contains('aviso-legal')) {
+  setInterval(() => {
+    document.title = text.substring(i) + text.substring(0, i);
+    i = (i + 1) % text.length;
+  }, 200);
+  
+}
 /* MAPA */
 if (document.getElementById('google-map')) {
   const map = L.map('google-map').setView([38.2699, -0.7126], 13);
@@ -28,7 +28,6 @@ if (document.getElementById('google-map')) {
       zoomOffset: -1,
     }
   ).addTo(map);
-
   const markers = [
     {
       locationName: 'Universidad UMH, Miguel Hernández.',
@@ -49,12 +48,10 @@ if (document.getElementById('google-map')) {
       address: 'Avinguda de Candalix, s/n, 03202 Elx, Alicante',
     },
   ];
-
   const fehIcon = L.icon({
     iconUrl: './IMG/logo_sinfondo.png',
     iconSize: [40, 40],
   });
-
   markers.forEach((m) => {
     L.marker([m.lat, m.lng], { icon: fehIcon })
       .addTo(map)
@@ -66,8 +63,6 @@ if (document.getElementById('google-map')) {
       `);
   });
 }
-
-
 const track = document.querySelector('.s-6-info-tarjeta');
 const btnLeft = document.querySelector('.flecha-izquierda');
 const btnRight = document.querySelector('.flecha-derecha');
@@ -80,7 +75,6 @@ if (track && btnLeft && btnRight) {
     track.scrollBy({ left: -340, behavior: 'smooth' });
   });
 }
-
 document.addEventListener('DOMContentLoaded', function () {
   var videoPlayButton,
       videoWrapper = document.querySelector('.video-wrapper'),
@@ -112,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
     videoMethods.renderVideoPlayButton();
   }
 });
-
 const s6track = document.querySelector('.s-6-track');
 const flecha1 = document.querySelector('.flecha1');
 const flecha2 = document.querySelector('.flecha2');
@@ -142,8 +135,6 @@ if (footer) {
   document.addEventListener('DOMContentLoaded', mostrarFooter);
   mostrarFooter();
 }
-
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -154,9 +145,10 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.15
 });
 
-document.querySelectorAll('.s-2, .s-3, .s-4, .s-5-cards, .card, .s-6-info, .video-wrapper, .caja')
-  .forEach(el => observer.observe(el));
-
+if (!document.body.classList.contains('aviso-legal')) {
+  document.querySelectorAll('.s-2, .s-3, .s-4, .s-5-cards, .card, .s-6-info, .video-wrapper, .caja')
+    .forEach(el => observer.observe(el));
+}
 const panels = document.querySelectorAll(".panel");
 
 panels.forEach((panel) => {
@@ -171,38 +163,29 @@ const removeActiveClasses = () => {
     panel.classList.remove("active");
   });
 };
+const p2Slides = document.querySelectorAll('.p-2-contenedor2');
+const p2Textos = document.querySelectorAll('.p-2-texto1');
+const p2Dots = document.querySelectorAll('.p-2-dot');
 
-const slides = document.querySelectorAll('.p-1 .slide');
-let index = 0;
-
-setInterval(() => {
-  slides[index].classList.remove('active');
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
-}, 4000);
-
-const collabSlides = document.querySelectorAll('.collab-slide');
-const collabTextos = document.querySelectorAll('.collab-slide-texto');
-const collabDots = document.querySelectorAll('.collab-dot');
-
-if (collabSlides.length && collabDots.length) {
-  let collabCurrent = 0;
-
+if (p2Slides.length && p2Textos.length && p2Dots.length) {
+  let current = 0;
   function goTo(index) {
-    collabSlides.forEach(s => s.classList.remove('active'));
-    collabTextos.forEach(t => t.classList.remove('active'));
-    collabDots.forEach(d => d.classList.remove('active'));
-    collabSlides[index].classList.add('active');
-    collabTextos[index].classList.add('active');
-    collabDots[index].classList.add('active');
-    collabCurrent = index;
+    p2Slides.forEach(s => s.classList.remove('active'));
+    p2Textos.forEach(t => t.classList.remove('active'));
+    p2Dots.forEach(d => d.classList.remove('active'));
+    if (p2Slides[index]) p2Slides[index].classList.add('active');
+    if (p2Textos[index]) p2Textos[index].classList.add('active');
+    if (p2Dots[index]) p2Dots[index].classList.add('active');
+
+    current = index;
   }
-
-  collabDots.forEach(dot => {
-    dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index)));
+  p2Dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(parseInt(dot.dataset.index));
+    });
   });
-
   setInterval(() => {
-    goTo((collabCurrent + 1) % collabSlides.length);
+    goTo((current + 1) % p2Slides.length);
   }, 3000);
+
 }
