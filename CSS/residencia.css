@@ -45,16 +45,12 @@ body {
   margin: 0 0 16px 0;
 }
 
-
-
-
-
 #carrousel-container {
   position: relative;
   z-index: 1;
-  width: calc(100% + 30rem);
-  margin: 0 0 0 -15rem;
-  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 
 #carrousel {
@@ -70,14 +66,10 @@ body {
   }
 }
 
-
-
-
-
-
 .contenedor-a-2 {
   display: flex;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .panel {
@@ -238,11 +230,6 @@ body {
 .p-2-dot.active {
   background: #000;
 }
-
-
-
-
-
 
 @media (min-width: 1024px) {
 

@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+
   font-family: "articulat-cf", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -39,9 +40,7 @@ h6 {
   font-weight: 200;
   font-style: italic;
   display: inline;
-
 }
-
 
 .s-1 {
   position: relative;
@@ -50,26 +49,21 @@ h6 {
 }
 
 .fondo {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.fondo-img {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-.fondo-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4),
+   rgba(0, 0, 0, 0.2));
+  z-index: 1;
 }
-
-
-
 
 .fondo video {
   position: absolute;
@@ -81,35 +75,29 @@ h6 {
 
 .contenido1 {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 0;
-
-  padding: 20px;
+  z-index: 2;
+  padding: 16px;
   max-width: 90%;
-
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  color: white;
-  z-index: 2;
 }
 
 .titulo {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.2;
-
-  margin: 0 0 12px 0;
-
+  margin: 0 0 10px 0;
   text-align: left;
 }
 
 .p1 {
-  font-size: 1rem;
-  margin: 0 0 16px 0;
+  font-size: 0.95rem;
   opacity: 0.9;
+  margin: 0 0 16px 0;
 }
-
 
 .btn {
   position: relative;
@@ -189,7 +177,6 @@ h6 {
   border-radius: 12px;
   overflow: hidden;
   text-align: left;
-
 }
 
 .card img {
@@ -197,7 +184,6 @@ h6 {
   height: 140px;
   object-fit: cover;
   border-radius: 15px;
-
 }
 
 .contenido-2 {
@@ -264,7 +250,6 @@ h6 {
     transform: translateX(-50%);
   }
 }
-
 
 .container-mapa {
   display: grid;
@@ -523,22 +508,24 @@ h6 {
   display: none;
 }
 
-
 .visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-
 @media (min-width: 1024px) {
-
   .contenido1 {
     padding: 48px;
+    max-width: 550px;
+    bottom: 60px;
   }
 
   .titulo {
-    font-size: 2.5rem;
-    max-width: 500px;
+    font-size: 2.2rem;
+  }
+
+  .p1 {
+    font-size: 1.1rem;
   }
 
   .s-2 .texto1 {
